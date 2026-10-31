@@ -207,3 +207,24 @@ zig build compile-errors
 A successful run reports each case as `PASS` and finishes with a summary. If a case unexpectedly compiles, or fails with diagnostics that do not match its expectations, the test is reported as `FAIL`.
 
 These tests complement the regular library tests; they do not replace them.
+
+## Examples
+
+The `examples/` directory contains standalone examples demonstrating how traits can be defined, implemented, and used in Zig programs.
+
+The examples cover:
+
+- **Conversions** — Defining and discovering conversion traits with `impl` and `getTrait`.
+- **Indexing** — Describing lookup behavior with an indexing trait.
+- **Iteration** — Defining iterator and iterable traits.
+- **Reducers** — Using traits to describe reduction operations, including stateful reducers and allocation management.
+
+Each example is self-contained and includes tests demonstrating its behavior.
+
+To compile and run all example tests:
+
+```sh
+zig build examples
+```
+
+A successful run means all example files compiled and their tests passed.
